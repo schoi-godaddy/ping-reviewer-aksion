@@ -2,6 +2,8 @@
 
 Github action to ping reviewer when PR is made. PLEASE DO NOT USE THIS - This package is for demo purpose.
 
+![Ping aksion run image](./img/ping-aksion.png)
+
 ## Environment Variables
 
 ## `GITHUB_TOKEN`

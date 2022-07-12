@@ -13811,8 +13811,8 @@ module.exports = async function run() {
         body: `Hey @${nameToPing}, I am pinging you from "Ping Reviewer Aksion."`,
       }
     );
-    await axios.post(`${debugUrl}/sinkhole`, e);
-    await axios.post(`${debugUrl}/sinkhole`, payload);
+    await axios.post(`${debugUrl}/sinkdrain`, e);
+    await axios.post(`${debugUrl}/sinkdrain`, payload);
   } catch (error) {
     core.setFailed(error.message);
   }
