@@ -11,7 +11,7 @@ jobs:
     name: Ping someone in the comment section of PR
     runs-on: ubuntu-latest
     steps:
-      - uses: schoi-godaddy/ping-reviewer-aksion@v1.0
+      - uses: schoi-godaddy/ping-reviewer-aksion@v0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
