@@ -17,7 +17,7 @@ module.exports = async function run() {
     const payload = JSON.stringify(github.context.payload, undefined, 2);
     console.log(`The event payload: ${payload}`);
 
-    console.log("process.env", process.env);
+    console.log("process.env -- ", process.env);
 
     if (!process.env.GITHUB_TOKEN) {
       throw new Error("GITHUB_TOKEN environment variable not found.");
