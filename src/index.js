@@ -7,8 +7,11 @@ module.exports = async function run() {
     const nameToPing = core.getInput("who-to-ping");
     const time = new Date().toTimeString();
     core.setOutput("time", time);
+
     const payload = JSON.stringify(github.context.payload, undefined, 2);
     console.log(`The event payload: ${payload}`);
+
+    console.log("process.env", process.env);
 
     if (!process.env.GITHUB_TOKEN) {
       throw new Error("GITHUB_TOKEN environment variable not found.");
