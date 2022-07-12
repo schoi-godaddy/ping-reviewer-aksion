@@ -1,0 +1,23 @@
+{
+  "name": "ping-reviewer-aksion",
+  "version": "0.1.0",
+  "description": "Github action to ping reviewer when PR is made. PLEASE DO NOT USE THIS - This package is for demo purpose.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schoi-godaddy/ping-reviewer-aksion.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schoi-godaddy/ping-reviewer-aksion/issues"
+  },
+  "homepage": "https://github.com/schoi-godaddy/ping-reviewer-aksion#readme",
+  "dependencies": {
+    "@actions/core": "^1.9.0",
+    "@actions/github": "^5.0.3"
+  }
+}

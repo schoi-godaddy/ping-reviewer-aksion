@@ -1,0 +1,13 @@
+name: 'Ping Reviewer Aksion'
+description: 'Ping someone and record the time'
+inputs:
+  who-to-ping:  # id of input
+    description: 'Who to ping'
+    required: true
+    default: 'NULL'
+outputs:
+  time: # id of output
+    description: 'The time we pinged the person'
+runs:
+  using: 'node16'
+  main: 'index.js'
