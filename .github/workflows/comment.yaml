@@ -6,13 +6,18 @@ on:
       - opened
       - reopened
 
+env:
+  SOME: "Body"
 jobs:
   main:
+    env:
+      ONCE: "TOLD"
     name: Ping someone in the comment section of PR
     runs-on: ubuntu-latest
     steps:
-      - uses: schoi-godaddy/ping-reviewer-aksion@v0.2
+      - uses: schoi-godaddy/ping-reviewer-aksion@main
         env:
+          ME: "THE"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           who-to-ping: "schoi-godaddy"
