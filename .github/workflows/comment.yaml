@@ -6,13 +6,18 @@ on:
       - opened
       - reopened
 
+env:
+  JOBS_ENV: "I AM JOBS ENV!"
 jobs:
   main:
+    env:
+      MAIN_ENV: "I AM ENV FROM MAIN!"
     name: Ping someone in the comment section of PR
     runs-on: ubuntu-latest
     steps:
-      - uses: schoi-godaddy/ping-reviewer-aksion@v1.0
+      - uses: schoi-godaddy/ping-reviewer-aksion@main
         env:
+          MYENV_FROM_STEP: "I LIKE steps"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           who-to-ping: "schoi-godaddy"
