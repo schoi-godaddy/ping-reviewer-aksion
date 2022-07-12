@@ -8849,13 +8849,13 @@ module.exports = async function run() {
     const payload = JSON.stringify(github.context.payload, undefined, 2);
     console.log(`The event payload: ${payload}`);
 
-    console.log("process.env -- ", process.env);
+    const e = process.env;
 
-    if (!process.env.GITHUB_TOKEN) {
+    if (!e.GITHUB_TOKEN) {
       throw new Error("GITHUB_TOKEN environment variable not found.");
     }
 
-    const client = github.getOctokit(process.env.GITHUB_TOKEN);
+    const client = github.getOctokit(e.GITHUB_TOKEN);
 
     const contextPullRequest = github.context.payload.pull_request;
     if (!contextPullRequest) {
