@@ -1,6 +1,6 @@
 {
   "name": "ping-reviewer-aksion",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Github action to ping reviewer when PR is made. PLEASE DO NOT USE THIS - This package is for demo purpose.",
   "main": "dist/index.js",
   "scripts": {
