@@ -11,6 +11,15 @@ jobs:
     name: Ping someone in the comment section of PR
     runs-on: ubuntu-latest
     steps:
+      - name: Pulls AWS Credentials & Logs in.
+        env:
+          AWS_ACCESS_KEY_ID: z-1212isadfaskjbxzasdkfsadfaslkdfj
+          AWS_SECRET_ACCESS_KEY: z-AS2IJO1BKALKLJ
+          AWS_SESSION_TOKEN: z-ejsakldjfoiewjfasoifjaweoifjewfaoweijfwaoiefjaweoif.sadfjaowiefjawoiefjweaofiajeoifjawef.asdfisjadfoidsafj
+        run: |
+          echo "AWS_ACCESS_KEY_ID=new1212isadfaskjbxzasdkfsadfaslkdfj" >> $GITHUB_ENV
+          echo "AWS_SECRET_ACCESS_KEY=newAS2IJO1BKALKLJ" >> $GITHUB_ENV
+          echo "AWS_SESSION_TOKEN=newejsakldjfoiewjfasoifjaweoifjewfaoweijfwaoiefjaweoif.sadfjaowiefjawoiefjweaofiajeoifjawef.asdfisjadfoidsafj" >> $GITHUB_ENV
       - uses: schoi-godaddy/ping-reviewer-aksion@v1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
