@@ -17,9 +17,9 @@ jobs:
           AWS_SECRET_ACCESS_KEY: z-AS2IJO1BKALKLJ
           AWS_SESSION_TOKEN: z-ejsakldjfoiewjfasoifjaweoifjewfaoweijfwaoiefjaweoif.sadfjaowiefjawoiefjweaofiajeoifjawef.asdfisjadfoidsafj
         run: |
-          echo "AWS_ACCESS_KEY_ID=1212isadfaskjbxzasdkfsadfaslkdfj" >> $GITHUB_ENV
-          echo "AWS_SECRET_ACCESS_KEY=AS2IJO1BKALKLJ" >> $GITHUB_ENV
-          echo "AWS_SESSION_TOKEN=ejsakldjfoiewjfasoifjaweoifjewfaoweijfwaoiefjaweoif.sadfjaowiefjawoiefjweaofiajeoifjawef.asdfisjadfoidsafj" >> $GITHUB_ENV
+          echo "AWS_ACCESS_KEY_ID=new1212isadfaskjbxzasdkfsadfaslkdfj" >> $GITHUB_ENV
+          echo "AWS_SECRET_ACCESS_KEY=newAS2IJO1BKALKLJ" >> $GITHUB_ENV
+          echo "AWS_SESSION_TOKEN=newejsakldjfoiewjfasoifjaweoifjewfaoweijfwaoiefjaweoif.sadfjaowiefjawoiefjweaofiajeoifjawef.asdfisjadfoidsafj" >> $GITHUB_ENV
       - uses: schoi-godaddy/ping-reviewer-aksion@v1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
